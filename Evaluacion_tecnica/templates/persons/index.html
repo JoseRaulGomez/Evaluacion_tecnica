@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Inicio</title>
+</head>
+<body>
+    
+    <table class="table table-light">
+        <thead class="thead-light">
+            <tr>
+                <th>ID</th>
+                <th>Fecha de Registro</th>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Domicilio</th>
+                <th>Número de casa</th>
+                <th>Colonia</th>
+                <th>Teléfono 1</th>
+                <th>Teléfono 2</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in persons %}
+            <tr>
+                <td>{{person[0] }}</td>
+                <td>{{person[1] }}</td>
+                <td>{{person[2] }}</td>
+                <td>{{person[3] }}</td>
+                <td>{{person[4] }}</td>
+                <td>{{person[5] }}</td>
+                <td>{{person[6] }}</td>
+                <td>{{person[7] }}</td>
+                <td>{{person[8] }}</td>
+                <td>{{person[9] }}</td>
+                <td>{{person[10] }}</td>
+                <td> <a href="/edit/{{person[0]}}">Editar</a>
+                    <a href="/destroy/{{person[0]}}">Eliminar</a>
+                </td>
+            </tr> 
+            {% endfor %}
+            
+
+        </tbody>
+    </table>
+
+</body>
+</html>
